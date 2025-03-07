@@ -1,0 +1,11 @@
+let x = 2; 
+let y = 3; 
+
+let result = 1; 
+for (let i = 0; i < y; i++) {
+    result *= x; 
+}
+
+console.log("Результат піднесення до степеня: " + result);
+
+Результат піднесення до степеня: 8
