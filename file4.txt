@@ -1,0 +1,42 @@
+
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min; // Генерація випадкового числа
+}
+
+function checkProbabilityTheory(count) {
+    let evenCount = 0; // Кількість парних чисел
+    let oddCount = 0; // Кількість непарних чисел
+
+    console.log("Згенеровані числа:");
+    for (let i = 0; i < count; i++) {
+        
+        let randomNumber = getRandom(100, 1000); // Використання getRandom для генерації числа в діапазоні [100, 1000]
+        console.log(randomNumber); 
+
+        if (randomNumber % 2 === 0) {
+            evenCount++; // Якщо число парне
+        } else {
+            oddCount++; // Якщо число непарне
+        }
+    }
+     // Обчислення відсотків
+    let evenPercentage = (evenCount / count) * 100;  
+   
+    let oddPercentage = (oddCount / count) * 100; 
+
+    // Виведення результатів
+    console.log("\nКількість згенерованих чисел:", count);
+    console.log("Парних чисел:", evenCount);
+    console.log("Непарних чисел:", oddCount);
+    console.log("Відсоток парних чисел:", evenPercentage.toFixed(2) + "%");
+    console.log("Відсоток непарних чисел:", oddPercentage.toFixed(2) + "%");
+}
+
+// Запит кількості випадкових чисел у користувача
+const count = parseInt(prompt("Введіть кількість випадкових чисел для генерації: "));
+if (!isNaN(count) && count > 0) {
+    checkProbabilityTheory(count); // Виклик функції
+} else {
+    console.log("Введіть коректне число більше нуля.");
+}
