@@ -1,0 +1,7 @@
+const re = /[^aA]{6,}/;
+console.log(re.test("Wonderful"));    // поверне в консоль true;
+console.log(re.test("Joyful"));    // поверне в консоль true;
+console.log(re.test("Happiness")); // поверне в консоль false;
+console.log(re.test("Time"));      // поверне в консоль false;
+console.log(re.test("Task"));      // поверне в консоль false;
+console.log(re.test("Apple"));     // поверне в консоль false;
