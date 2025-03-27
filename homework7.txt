@@ -1,4 +1,4 @@
-const re = /[^aA]{6,}/;
+const re = /^[^aA]{6,}$/
 console.log(re.test("Wonderful"));    // поверне в консоль true;
 console.log(re.test("Joyful"));    // поверне в консоль true;
 console.log(re.test("Happiness")); // поверне в консоль false;
